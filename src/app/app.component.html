@@ -14,7 +14,7 @@
   <div class="addedDetails">
     <ul id="detailsCol">
       <li *ngFor = "let field of lang">
-        {{field.name}}
+        {{field}}
         <span [innerHTML] = "closeElmt" class="close" (click) = "deleteData($event)"></span>
       </li>
     </ul>

@@ -14,7 +14,9 @@ export class AppComponent {
 
   closeElmt : string;
 
-  lang : any[] = [
+  lang : any[] = ["pineapple", "apples", "tomatoes", "water"];
+
+  langDetail : any[] = [
     {name : 'Angular2'},
     {name : 'React'},
     {name : 'React Native'},
@@ -24,8 +26,9 @@ export class AppComponent {
   ];
 
   addList(newList){
+    console.log(1)
     this.lang.push(newList);
-    console.log(this.lang);
+    //$('li').append('<li>'+newList+'</li>')
   }
 
   deleteData(event){
