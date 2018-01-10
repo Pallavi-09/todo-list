@@ -13,6 +13,7 @@ export class AppComponent {
   }
 
   closeElmt : string;
+  checkedToggle : Boolean = false;
 
   lang : any[] = ["pineapple", "apples", "tomatoes", "water"];
 
@@ -26,14 +27,22 @@ export class AppComponent {
   ];
 
   addList(newList){
-    console.log(1)
     this.lang.push(newList);
-    //$('li').append('<li>'+newList+'</li>')
   }
 
-  deleteData(event){
+  deleteData(txt,event){
     let deleteTxt = event.currentTarget;
     let deleteParent = deleteTxt.parentElement;
+    let textParent = txt.split(" ")[0];
+    let index = this.lang.indexOf(textParent);
+    if (index !== -1) {
+      this.lang.splice(index, 1);
+    }   
     deleteParent.remove();
   }
+
+  checkedTitle(e){
+    let liTxt = e.currentTarget.classList.toggle('checked');
+  }
+
 }

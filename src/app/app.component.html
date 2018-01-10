@@ -1,22 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="main-panel">
   <div class="addPanel">
-    <div>
+    <div class="FontFamily">
       <h1>
         Welcome to {{ title }}!
       </h1>
     </div>
     <div class="addDiv">
-      <input type="text" id="addName" placeholder="Title" class="text-cls" [(ngModel)] = "textVal" />
-      <label for="addName" class="addbtn" (click) = "addList(textVal)">Add</label>
+      <input type="text" id="addName" placeholder="Title..." class="text-cls FontFamily" [(ngModel)] = "textVal" />
+      <label for="addName" class="addbtn FontFamily" (click) = "addList(textVal)">Add</label>
     </div>  
   </div>
-  <div class="addedDetails">
+  <div class="addedDetails FontFamily">
     <ul id="detailsCol">
-      <li *ngFor = "let field of lang">
-        {{field}}
-        <span [innerHTML] = "closeElmt" class="close" (click) = "deleteData($event)"></span>
-      </li>
+      <app-list></app-list>
     </ul>
   </div>
 </div>
