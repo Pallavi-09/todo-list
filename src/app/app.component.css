@@ -30,7 +30,7 @@ ul{
 ul li{
     list-style:none;
     cursor:pointer;
-    width:100%;
+    width:98.4%;
     display:block;
     vertical-align: middle;
     line-height: 51px;
@@ -65,7 +65,6 @@ ul li.checked::before {
 .close{
     display: inline-block;
     padding: 0px 17px 0px 17px;
-    float: right;
     margin-right: 25px;
 }
 
@@ -85,4 +84,20 @@ ul li:hover{
 ul li.checked{
     background-color: #888888;
     color:#fff;
+}
+
+.pull-right{
+    float : right;
+}
+
+.btn{
+    background-color: #79554899;
+    cursor: pointer;
+    color: #000;
+    height: 29px;
+    width: 123px;
+    border: 1px solid transparent;
+    margin-left: 5px;
+    font-family: cursive;
+    font-size: 15px;
 }

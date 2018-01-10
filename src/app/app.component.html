@@ -13,7 +13,24 @@
   </div>
   <div class="addedDetails FontFamily">
     <ul id="detailsCol">
-      <app-list></app-list>
+      <li *ngFor = "let field of lang" #taskLi (click) = "checkedTitle($event)">
+        {{field}}
+       
+        <span [innerHTML] = "closeElmt" class="close pull-right" (click) = "deleteData(taskLi.innerText,$event)"></span>  
+        <span class="pull-right">
+          <button class="btn">Font Toggle</button>
+        </span>
+        <span class="pull-right">
+          <button class="btn">BG Color</button>
+        </span>
+        <span class="pull-right">
+          <button class="btn">Edit</button>
+        </span>
+        <app-list></app-list>
+      </li>
     </ul>
+  </div>
+  <div class="AlertArea">
+      
   </div>
 </div>
