@@ -65,7 +65,7 @@ ul li.checked::before {
 .close{
     display: inline-block;
     padding: 0px 17px 0px 17px;
-    margin-right: 25px;
+     
 }
 
 .close:hover{
@@ -100,4 +100,24 @@ ul li.checked{
     margin-left: 5px;
     font-family: cursive;
     font-size: 15px;
+}
+
+.color1{
+    background-color: #FFC300 !important;
+}
+
+.color2{
+    background-color: #FF5733 !important;
+}
+
+.color3{
+    background-color: #C70039 !important;
+}
+
+.color4{
+    background-color: #900C3E !important;
+}
+
+.color5{
+    background-color: #FFF !important;
 }

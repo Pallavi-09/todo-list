@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
   title = 'ToDo List App';
 
@@ -17,15 +20,8 @@ export class AppComponent {
 
   lang : any[] = ["pineapple", "apples", "tomatoes", "water"];
 
-  langDetail : any[] = [
-    {name : 'Angular2'},
-    {name : 'React'},
-    {name : 'React Native'},
-    {name : 'Javascript'},
-    {name : 'HTML5'},
-    {name : 'CSS'},    
-  ];
-
+  bgColor : any[] = ["color1","color2","color3","color4","color5"]
+  
   addList(newList){
     this.lang.push(newList);
   }
@@ -42,7 +38,23 @@ export class AppComponent {
   }
 
   checkedTitle(e){
-    let liTxt = e.currentTarget.classList.toggle('checked');
+    //let liTxt = e.currentTarget.classList.toggle('checked');
   }
 
+  editFunc(e){
+    //console.log("edit enable");
+    //e.target.classList.remove
+  }
+
+  backColor(e){
+      let target = e.currentTarget.parentElement.parentElement.attributes.class.nodeValue;
+      let indexAry = this.bgColor.indexOf(target);
+      let nextIndex;
+      if(indexAry >= 4){
+        nextIndex = 0;
+      }
+      else{
+        nextIndex = indexAry+1;
+      }
+  }
 }

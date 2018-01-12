@@ -11,3 +11,7 @@
 .pull-right{
     float : right;
 }
+
+.TodoNone{
+    display: none;
+}
