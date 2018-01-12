@@ -47,14 +47,20 @@ export class AppComponent {
   }
 
   backColor(e){
-      let target = e.currentTarget.parentElement.parentElement.attributes.class.nodeValue;
-      let indexAry = this.bgColor.indexOf(target);
-      let nextIndex;
-      if(indexAry >= 4){
-        nextIndex = 0;
-      }
-      else{
-        nextIndex = indexAry+1;
-      }
+    let target = e.currentTarget.parentElement.parentElement.attributes.class.nodeValue;
+    let indexAry = this.bgColor.indexOf(target);
+    let nextIndex;
+    if(indexAry >= 4){
+      nextIndex = 0;
+    }
+    else{
+      nextIndex = indexAry+1;
+    }
+    let classActive = this.bgColor[nextIndex];
+    
+    e.currentTarget.parentElement.parentElement.classList.remove(target);
+    
+    e.currentTarget.parentElement.parentElement.classList.add(classActive);
+  
   }
 }
