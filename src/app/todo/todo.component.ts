@@ -7,16 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  title = 'ToDo List App';
-  closeElmt : string;
-  
   constructor() { this.closeElmt = "\u00D7";}
 
   ngOnInit() {
   }
-
+  
+  title = 'ToDo List App';
+  closeElmt : string;
   checkedToggle : Boolean = false;
   size = 16;
+  showText = 1230;
 
   lang : any[] = [
     { "name" : "pineapple"},
@@ -24,7 +24,7 @@ export class TodoComponent implements OnInit {
     { "name" : "tomatoes"},
     { "name" : "water"}
   ];
-  
+
   bgColor : any[] = ["color1","color2","color3","color4","color5"]
   
   addList(newList){
@@ -78,5 +78,6 @@ export class TodoComponent implements OnInit {
 
   editFunc(e){
     e.stopPropagation();
+    this.showText != this.showText;
   }
 }
