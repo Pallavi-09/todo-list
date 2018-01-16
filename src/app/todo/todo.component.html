@@ -1,0 +1,37 @@
+<div class="main-panel">
+  <div class="addPanel">
+    <div class="FontFamily">
+      <h1>
+        Welcome to {{ title }}!
+      </h1>
+    </div>
+    <div class="addDiv">
+      <input type="text" id="addName" placeholder="Title..." class="text-cls FontFamily" [(ngModel)] = "textVal" />
+      <label for="addName" class="addbtn FontFamily" (click) = "addList(textVal)">Add</label>
+    </div>  
+  </div>
+  <div class="addedDetails FontFamily">
+    <ul id="detailsCol">
+      <li class="color5" [ngStyle] = "{'font-size' : size + 'px' }" *ngFor = "let field of lang" #taskLi (click) = "checkedTitle($event)">
+        {{field.name}}
+        <span [innerHTML] = "closeElmt" class="close pull-right" (click) = "deleteData(taskLi.innerText,$event)"></span>  
+        <span class="pull-right">
+          <button class="btn" (click)="fontDec($event)">Font -</button>
+        </span>
+        <span class="pull-right">
+          <button class="btn" (click)="fontInc($event)">Font +</button>
+        </span>
+        <span class="pull-right">
+          <button class="btn" (click)="backColor($event)">BG Color</button>
+        </span>
+        <span class="pull-right">
+          <button class="btn" (click)="editFunc($event)">Edit</button>
+        </span>
+        <app-list [todolist]="childvalue"></app-list>
+      </li>
+    </ul>
+  </div>
+  <div class="AlertArea">
+      
+  </div>
+</div>
